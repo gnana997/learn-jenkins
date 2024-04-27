@@ -6,6 +6,12 @@
 
 ## Jenkins CLI Plugin Management Commands
 
+# Tips:
+
+- use -auth option to provide username and password
+- use -noCertificateCheck option to ignore certificate check
+- use -restart option to restart Jenkins after installing/enabling/disabling the plugin
+
 1. Run the following command to check the version of the Jenkins CLI:
 
    ```bash
