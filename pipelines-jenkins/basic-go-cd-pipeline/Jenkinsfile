@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    tools {
+        go 'go-1.20'
+    }
+
+    environment {
+        GOPATH = '/home/jenkins/go'
+        GO111MODULE = 'on'
+    }
+
+    stages {
+        stage('Dev') {
+            steps {
+                git '<github url>'
+            }
+        }
+
+        stage('Build our image') {
+            steps {
+                script {
+                    docker.build("my-image:${env.BUILD_NUMBER}")
+                }
+            }
+        }
+}

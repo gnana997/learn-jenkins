@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    tools {
+        go 'go-1.20'
+    }
+
+    environment {
+        GOPATH = '/home/jenkins/go'
+        GO111MODULE = 'on'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git '<github url>'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'go build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'go test ./...'
+            }
+        }
+}
