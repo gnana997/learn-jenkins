@@ -24,7 +24,7 @@ Notes on how to setup Jenkins and Use for CI/CD pipelines. I have used a basic g
 
 ## Notes to setup Pipelines in Jenkins
 
-- Refer the notes in [pipeline-jenkins](/pipeline-jenkins)
+- Refer the notes in [pipeline-jenkins](/pipelines-jenkins)
 
 ## Notes to setup build agents for Jenkins
 
