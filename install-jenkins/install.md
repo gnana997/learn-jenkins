@@ -11,7 +11,7 @@
 2. Run Steps:
    1. Create network and volumes:
       ```bash
-      docker network create jenkins
+      docker network create --subnet=172.20.0.0/16 jenkins
       docker volume create jenkins-data
       docker volume create jenkins-docker-certs
       ```
